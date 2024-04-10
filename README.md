@@ -210,7 +210,7 @@ A sample of a full set of environment variables that configure dotnet-monitor, t
 
 ### Additional setting
 
-Finally, we need to set the args for the container. The `--no-auth` flag will be used as well for simplicity but [authentication](https://github.com/dotnet/dotnet-monitor/blob/main/documentation/authentication.md) should be configured in production scenarios. To add the args config, we need to run the following commands:
+Finally, we need to set the `args` for the container. The `--no-auth` flag will be used as well for simplicity but [authentication](https://github.com/dotnet/dotnet-monitor/blob/main/documentation/authentication.md) should be configured in production scenarios. To add the `args`, we need to run the following commands:
 
 ```powershell
 
@@ -219,7 +219,7 @@ $ az login
 $ az containerapp show -n <APP_NAME> -g <RESOURCE_GROUP_NAME> -o yaml > app.yaml
 ```
 
-This command allows to get the internal yaml file used by ACA. It should be edited to add the args as shown here (environment variables omitted) and then upload the yaml file.
+This command allows to get the internal yaml file used by ACA. It should be edited to add the `args` key as shown here (environment variables omitted) and then upload the yaml file.
 
 ```yaml
 ...
